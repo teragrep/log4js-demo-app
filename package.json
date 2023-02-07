@@ -1,0 +1,50 @@
+{
+  "name": "@teragrep/log4js-demo-app",
+  "version": "v1.0.0",
+  "description": "Syslog Javascript client library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spidermanja/log4js-demo-app"
+  },
+  "bugs": {
+    "url": "https://github.com/spidermanja/log4js-demo-app/issues"
+  },
+  "scripts": {
+    "test": "karma start --single-run  ./src/test/js/karma.conf.js",
+    "karma-test": "jasmine",
+    "postpublish": "npm run publish-npm",
+    "publish-npm": "npm publish --access public --ignore-scripts --@teragrep:registry='https://registry.npmjs.org'"
+  },
+  "engines": {
+    "node": ">=12.5.0"
+  },
+  "files": [
+    "src/**/*.js"
+  ],
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "author": "Teragrep",
+  "license": "Apache-2.0",
+  "main": "./src/index.js",
+  "devDependencies": {
+    "@teragrep/rlo_08": "^1.0.1",
+    "@teragrep/rlp_02": "^1.0.19-rc8",
+    "async": "^3.2.1",
+    "async-mutex": "^0.3.2",
+    "dotenv": "^10.0.0",
+    "dsa.js": "^2.7.6",
+    "jasmine": "^3.99.0",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.3",
+    "karma-jasmine": "^4.0.1",
+    "karma-requirejs": "^1.1.0",
+    "log4js": "^6.6.1",
+    "node": "^16.19.0",
+    "requirejs": "^2.3.6"
+  },
+  "dependencies": {
+    "@teragrep/jsa_01": "file:../jsa_01"
+  }
+}
