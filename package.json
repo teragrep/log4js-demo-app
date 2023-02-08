@@ -29,6 +29,7 @@
   "license": "Apache-2.0",
   "main": "./src/index.js",
   "devDependencies": {
+    "@teragrep/jsa_01": "1.0.1-rc7",
     "@teragrep/rlo_08": "^1.0.1",
     "@teragrep/rlp_02": "^1.0.19-rc8",
     "async": "^3.2.1",
@@ -43,8 +44,5 @@
     "log4js": "^6.6.1",
     "node": "^16.19.0",
     "requirejs": "^2.3.6"
-  },
-  "dependencies": {
-    "@teragrep/jsa_01": "file:../jsa_01"
   }
 }
