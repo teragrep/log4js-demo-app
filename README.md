@@ -5,9 +5,17 @@
 
 ## Teragrep jsAppender for Log4js
 
-This is a demo app shows that jsAppender will send every log message it recived to a java-relp-server, over RELP protocol.
+This is a demo app shows that jsAppender will send every log message it received to a java-relp-server, over RELP protocol.
 
-## Install jsAppender
+## Steps
+- Install the required packages / dependencies
+     RLO_08 - Syslog format
+     RLP_02 - RELP Connection
+     JSA_91 - Appender
+
+- Configure the Log4js appender to use jsa_01 and further settings 
+
+### Install jsAppender
 
 ```cmd
 npm install @teragrep/jsa_01
@@ -23,6 +31,7 @@ log4js.configure( {
       jsa: { 
       type: '@teragrep/jsa_01',
       appName: 'teragrep',
+      serverAddress: 'localhost'
       serverPort: 1601,
      },
     console: { type: 'console' },
@@ -34,7 +43,7 @@ log4js.configure( {
 })
 
 ```
-
+This will transform the every log messages to RFC5424 Sylog format and send to the RELP compatible server.  
 
 
 
