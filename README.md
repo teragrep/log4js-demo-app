@@ -9,9 +9,9 @@ This is a demo app shows that jsAppender will send every log message it received
 
 ## Steps
 - Install the required packages / dependencies
-     RLO_08 - Syslog format
-     RLP_02 - RELP Connection
-     JSA_91 - Appender
+     - RLO_08 - Syslog format
+     - RLP_02 - RELP Connection
+     - JSA_01 - Appender
 
 - Configure the Log4js appender to use jsa_01 and further settings 
 
@@ -43,7 +43,7 @@ log4js.configure( {
 })
 
 ```
-This will transform the every log messages to RFC5424 Sylog format and send to the RELP compatible server.  
+This will transform the every log messages to RFC5424 Sylog format and send to the configured RELP compatible server.  
 
 
 
